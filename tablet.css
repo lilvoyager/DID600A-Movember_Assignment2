@@ -1,0 +1,848 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 601px) and (max-width: 1225px) {
+    body {
+        margin: 0;
+        /* to remove gap surrounding the edge of the page */
+    }
+
+    .main {
+        width: 100%;
+        margin:auto;
+        font-size: 0;
+        /* font-size 0 to remove random gap between div elements as browser is registering inlines as words  */
+        overflow-x: hidden;
+        /* to prevent horizontal scrolling for elements going beyond the page */
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        /* Flex allows the logo and nav content to appear side by side on page */
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        /* to make the nav bar sticky */
+        background-color: #FFFFFF;
+        z-index: 10;
+        /* to make the header and nav bar sit above the body elements */
+    }
+
+    .logo {
+        width:110px;
+        height: 35px;
+        padding: 0 5px;   
+    }
+
+    .nav_container {
+        width: 100%;
+        /* container width is now 100% as children elements are not stacked on top of each other instead of side-by-side. Flex is no longer displayed to facilitate this*/
+        display: flex;
+        justify-content: flex-end;
+        /* to push nav elements to RHS */
+    }
+
+    .nav_button { 
+        display: none;
+    }
+
+    .nav_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        padding: 0 10px;
+        /* to hide the nav buttons as they will not be in the hamburger menu */
+    }
+
+    .nav_button_stories {
+        display: none;
+        /*For the purposes of this assignment, the 'stories' button will never appear as the Movember site has a separate CSS for 'widedesktop' where the story button only appears when width of screen is >1085px. This would require a 4th CSS */     
+    }
+
+    .search_hamburger_container {
+        display: flex;
+        align-items: center;
+        /* to align the search and hambuger menu to the horiczntal center */
+        order: 3; 
+        /* to reorder the log in button, sign up & donate buttons, search button & hamburger menu */
+    }
+
+    .hamburger_menu {
+        width: 22px;
+        height: 22px;
+        /* to make the hamburger menu for mobile */
+        left: 0;
+        order: 2;
+        /* to flip the order of the search icon and the hamburger menu around */
+    }
+
+    .search_icon {
+        width: 20px;
+        height: 20px;
+        padding: 0 15px;
+        margin: 0 4px;
+        /* to create space between the hamburger menu and the search icon*/
+        order: 1;
+        /* to flip the order of the search icon and the hamburger menu around */
+    }
+
+    .vertical_line { 
+        width: 2px;
+        height: 50px;
+        background-color: #D7D8De;
+        margin: 16px 5px;
+        display: none;
+        /* this line is only present in the desktop view to separate the search icon and log in button */
+    }
+
+    .lite_logo {
+        width: 75px;
+        height: 18px;
+        margin: auto 0;
+        /* to horitontally */
+        display: none;
+        /* lite logo only appears in mobile view */
+    }
+
+    .log_in_button {
+        margin-right: 16px;
+    }
+
+    .log_in_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        padding: 10px 0 10px 26px;
+        margin: 0;
+        order: 1;
+        /* to reorder the log in button, sign up & donate buttons, search button & hamburger menu */
+    }
+
+    .sign_up_donate_container {
+        display: flex;
+        align-items: center;
+        order: 2;
+        /* to reorder the log in button, sign up & donate buttons, search button & hamburger menu */
+    }
+    
+    .sign_up_button {
+        /* styling of the button has been separated from the styling of the <p> text inside */
+        width: 130px;
+        font-size: 16px;
+        height: 100%;
+        margin-right: 4px;
+        padding: 16px;
+        /* consistent padding all around for tablet view */
+        box-sizing: border-box;
+        background-color: #000;
+        text-align: center;
+        /* to align the text in the sign up button */
+    }
+
+    .sign_up_button p {
+        margin: 0;
+        /* to remove the line height */
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        color: #FFFFFF;
+        line-height: 1;
+        /* to make the line height shorter so the button is shorter */
+    }
+
+    .header_donate_button {
+        width: 150px;
+        /* donate button takes up half the parent container in tablet view, but needs a gap between the two buttons*/
+        display: flex;
+        align-items: center;
+        background-color: #001EFF;
+        padding: 16px;
+        /* consistent padding all around for tablet view */
+        box-sizing: border-box;
+        margin-left: 4px;
+        justify-content: center;
+        /* to center align the content in the parent box */
+    }
+
+    .header_donate_button p {
+        margin: 0;
+        /* to remove the line height */
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-right: 10px;
+        line-height: 1;
+        /* to make the line height shorter so the button is shorter */
+    }
+
+    .donate_down_arrow {
+        width: 9px;
+        height: 6px;
+    }
+
+    .banner {
+        /* no padding to allow image to stretch across screen */
+        box-sizing: border-box; 
+        /* Border-box siing enables box to stay the same size when there is padding */
+        align-items: center; 
+        margin-top: 70px;
+        /* so the first section appears under the sticky navbar */
+    }
+
+    .banner_content_container {
+        display: flex;
+        flex-direction: column;
+        /* to display the children in a column and apply the order properttes in order to flip the second and third div orders. The 100% widths of the children will be removed as the column flex-direction is already stretching children elements across the screen */
+        width: 100%;
+        /* display flex has been removed as content is stacked, rather than side-by-side */
+    }
+
+    .banner_image_container {
+        order: 1;
+        /* the first child in the parent div */
+    }
+
+    .banner_image {
+        width: 100%;
+    }
+
+    .banner_text_container {
+        order: 3;
+        /* the third child in the parent div. The order of the divs has been switched in  view */
+        padding: 0px 18px 24px 18px;
+        margin-bottom: 40px;
+        /* to create a gap for wider text when the website is interactive */
+    }
+
+    h2 {
+        width: auto;
+        height: auto;
+        font-size: 49px;
+        font-family: 'Anton', sans-serif;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+
+    .banner_text_container p { 
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        margin: 0 auto;
+    }
+
+    .give_monthly_container {
+        order: 2;
+        /* the second child in the parent div. the order of the divs has been switched*/
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-top:20px;
+        margin-bottom: 10px;
+        padding: 0 18px;
+        box-sizing: border-box;
+    }
+
+    .give_monthly_button {
+        width: 148px;
+        height: 40px;
+        background-color:#0000001A;
+        /* the button will not be changed to black background with white text as it appears that the hover-state has been incorrectly applies to the default state */
+    }
+
+    .give_monthly_button p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .give_monthly_nav_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .give_monthly_arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #0000001A;
+    }
+
+    .give_monthly_page_number {
+        width: 91px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .give_monthly_page_number p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .scrolling_banner {
+        width: 100%;
+        height: 37px;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        /* to align the text to the horizontal center of the black scrolling banner */
+        white-space: nowrap;
+        overflow: hidden;
+        /* to prevent the text in the scrolling banner from wrapping when viewed on a smaller screen */
+    }
+
+    .scrolling_banner p {
+        font-size: 15px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        padding: 7.5px;
+        margin: 0 32px;
+        line-height: 1
+        /* to make the line-height shorter */
+    }
+
+    .firefighter_image {
+        width: 100%;
+        height: 450px;
+        /* to make the image shorter */
+        object-fit: cover;
+        /*so the image isn't stretched out*/
+    }
+
+    .fundraise {
+        width: 100%;
+        /* display flex is removed */
+    }
+
+    .fundraise_text_container {
+        width: 100%;
+        /* text stretches across entire width of screen */
+        padding: 40px 19px;
+        /* in tablet  view, there is a padding-bottom of 145px, but I think this is too long so I will keep it at 40px */
+        box-sizing: border-box;
+        /* border-box allows the box to stay the same size when there is padding so the image on the left remains in the grid */
+    }
+
+    .fundraise_text p {
+        font-size: 24px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto 30px;
+    }
+
+    .donate_button {
+        width: 72px;
+        height: 18px;
+        background-color: #001EFF;
+        margin-top: 40px;
+        margin-right: 340px;
+        padding: 8px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .donate_button p {
+        color: white;
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+    }
+
+    .white_arrow {
+        width: 12px;
+        height: 9.83px;
+        padding-right: 8px;
+    }
+
+    .fundraise_image_container {
+        width: 100%;
+        /* images stretches across entire screen */
+    }
+
+    .fundraise_image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        /*so the image isn't stretched out*/
+    }
+
+    .stories {
+        display: flex;
+        flex-direction: column;
+        /* to display the children in a column and apply the order properttes in order to flip the order of the children elements */
+    }
+
+    .stories_image_container {
+        /* width removed as column has automatic width applied  */
+        order: 2;
+        /* to change the order of this child element to be second */
+        display: flex;
+        /* to display the children in a column and apply the order properttes in order to flip the order of the children elements */
+    }
+
+    .stories_image {
+        width: 100%;
+        /* the image downloaded is slightly different to the image that is used on the home page, that is why it appears to be zoomed in */
+    }
+
+    .stories_image_description {
+        width: 100%;
+        padding: 16px;
+        background-color:#000000 ;
+        box-sizing: border-box;
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* align-items and justify-content switch functions when flex-direction is column instead of row */
+    }
+
+    .stories_image_description p {
+        font-size: 14px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        margin: 0;
+    }
+
+    .stories_text_container {
+        display: flex;
+        flex-direction: column;
+        /* to enable the stretching of stories text to align-center, while the height of the parent box refers to a min-height instead of an absolute height*/
+        order: 1;
+        /* to change the order of this child element in the parent to be first */
+        /* width has been removed as column width is automatically applied */
+        min-height: 375px;
+        padding: 24px 32px 24px 18px;
+        background-color: #001EFF;
+        box-sizing: border-box;
+        /* border-box allows the box to stay the same size when there is padding so the image on the left remains in the grid */
+        margin: 0 auto;
+    }
+
+    .stories_text_CTA_container {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        /* to push the children to the far LHS and far RHS of the parent div */
+    }
+
+    .stories_text_CTA {
+        width: 186px;
+        height: 40px;
+        background-color:#FFFFFF33;
+        /* the background colour will not be changed to white with blue text in tablet view as it appears that the original website has accidentally coded the hover-state (white background with blue text) to be the default-state*/
+        margin-right: 20px;
+    }
+
+    .stories_text_CTA p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .stories_nav_container {
+        display: flex;
+    }
+
+    .stories_arrow {
+        width:40px;
+        height: 40px;
+        background-color:#FFFFFF33;
+    }
+
+    .stories_page_number {
+        width: 88px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .stories_page_number p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .stories_text {
+        flex: 1;
+        /* to stretch the height of the text to stretch to 100% of the flex parent div*/
+        display: flex;
+        align-items: center;
+        /* to center the text in the parent box */
+    }
+
+    .stories_text p {
+        font-size: 24px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        margin: 0 auto 48px;
+    }
+
+    b {
+        font-weight: 500;
+        /* global bold has been created to decrease the intensity of the <b></b> tag used in the HTML */
+    }
+
+    .articles {
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .project_heading_container {
+        width: 100%;
+        /* to put the title on the LHS, and the arrows on the RHS of the parent */
+        padding: 0 20px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .project_heading_container p {
+        font-size: 24px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+    }
+
+    .arrow_container {
+        display: flex;
+    }
+
+    .articles_arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #0000001A;
+    }
+
+    .articles_page_number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .articles_page_number p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding:  0 4px;
+    }
+
+    .project_container {
+        width: 25%;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-top: 20px; 
+    }
+
+    .project {
+        margin: 0 10px;
+    }
+
+    .project:first-child {
+        margin-left: 0;
+        /* to remove the margin on the LHS of the first project child */
+    }
+
+    .project:last-child {
+        margin-right: 0;
+        /* to removek the margin on the RHS of the last project child */
+    }
+
+    .project_image {
+        width: 255px;
+        height: 255px;
+        margin-bottom: 12px;
+    }
+
+    .project p b {
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    .project p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto;
+    }
+
+    .newsletter {
+        width: 100%;
+        height: 423px;
+        text-align: center;
+        /* To center align the text in the div tag */
+        padding: 10px 70px;
+        box-sizing: border-box;
+        margin-bottom: 50px;
+        /* to create a gap between the newsletter sign up and sponsors section */
+    }
+
+    h3 {
+        font-size: 24px;
+        font-family: 'Anton', sans-serif;
+        margin-bottom: 24px;
+        letter-spacing: 2px;
+        /* to give the letters space so they aren't as cramped */
+        font-weight: 500;
+        /* note, the text for 'Project Funding Partners' wraps in my version and is contained within the page. However, in the original site, the text does not wrap. Upon inspection, the text on the original site is overflowing beyond the page, so will not be replicated */
+    }
+
+    .newsletter p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+    }
+
+    .form_text {
+        /*  width removed so the form text box fits in the screen */
+        height: 48px;
+        border: 1px solid;
+        /* to create solid outline around div containing text */
+        border-color: black;
+        padding: 6px 4px 6px 10px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        /* to round the edges */
+        margin: 0 auto 10px;
+        /* to center the box horizontally within its parent's box */
+        text-align: left;
+    }
+
+    .form_text p {
+        font-size: 14px;
+        color: grey;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        line-height: 35px;
+        /* to horitzontally align the text to the form box */
+        margin: 0 auto;
+        /* to horizontally align the form text */
+    }
+
+    .count_me_in_button {
+        width: 141px;
+        height: 51px;
+        background-color: #001EFF;
+        border: 2px solid;
+        border-color: #001EFF;
+        padding: 0 15px;
+        margin: 20px auto 35px;
+        /* to center align the button within it's parent's box and create gaps for the top and bottom*/
+    }
+
+    .count_me_in_button p {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-family:'Anton', sans-serif;
+        letter-spacing: 2px;
+        /* so letters aren't cramped together */
+        margin: 0 auto;
+        line-height: 50px;
+        /* to horizontally align the text in the button */
+    }
+
+    .terms_and_conditions {
+        box-sizing: border-box;
+    }
+
+    .terms_and_conditions p {
+        font-size: 14px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto 14px;
+        /* to center align the text within it's parent's box */
+    }
+
+    .terms_and_conditions a {
+        color: black;
+        font-weight: 600;
+    }
+
+    .sponsors {
+        width: 100%;
+        background-color: #f5f5f6;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .sponsors_container:nth-last-child(2) {
+        display: none;
+        /* to remove Promotional Partners from tablet view */
+    }
+
+    .sponsors_container h3 {
+        font-size: 11px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+        margin: 0 auto;
+        /* to remove space created by text height */
+        letter-spacing: 1px;
+        /* to remove wide letter spacing */
+    }
+
+    .partner_logo {
+       width: 160px;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .partner_logo:last-child {
+        padding-right: 0;
+        /* to remove padding right on the last logo in the set */
+    }
+
+    .sponsors_container {
+        padding: 0 7px;
+    }
+
+    .logo_container {
+        display: flex;
+        align-items: center;
+        /* to horizontally center the logos */
+        flex-wrap: wrap;
+        /* to create two rows for logos by wrapping children of parent */
+    }
+
+    .footer {
+        width: 100%;
+        /* removed the height of 518px to allow footer to size to content */
+        background-color: #151515;
+        padding: 28px;
+        box-sizing: border-box;
+    }
+
+    .footerbox {
+        width: 100%;
+        /* remove display:flex to items are stacked instead of side by side */
+    }
+
+    h4 {
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-family:'Anton', sans-serif;
+        font-weight: 300;
+        margin: 0 auto;
+        /* to remove extra space created by auto line height*/
+        margin-bottom: 7px;
+        /* to create a gap between the column heading and links below */
+    }
+
+    .footer_column a {
+        color: #ffffff;;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        text-decoration: none;
+        /* to remove underline from hyperlink */
+    }
+
+    .footer_column {
+        width: 50%;
+        /* so two columns can be side by side */
+        padding: 0 24px 24px 0;
+        box-sizing: border-box;
+    }
+
+    .footer_column p {
+        margin: 0 auto;
+        /* to remove extra space created by auto line height */
+        line-height: 1;
+        margin: 8px 0;
+    }
+
+    .footer_column_container {
+        display:flex; 
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* to enable two footer_columns to appear next to each other */
+    }
+
+    .footer_column_row {
+        margin-bottom: 24px;
+    }
+
+    .footer_column_row:last-child {
+        margin-bottom: 0;
+    }
+
+    .social_media_icon_container {
+        display: flex;
+    }
+
+    .social_media_icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        /* to create white circumference around icons */
+        background-color: #ffffff;
+        /* to create white background for social media icons that are transparent */
+    }
+
+    .copyright p {
+        color: #ffffff;;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        margin: 0 auto 28px;
+        /* to provide space so the copyright is not hidden behind the contact us chat button at the very bottom */
+    }
+
+    .chat_box {
+        width: 226px;
+        height: 50px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px;
+        /* to give the box a shadow (rather than an outline) */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        margin-right: 16px;
+        /* to provide a space between the chat box and edge of page */
+        border-radius: 8px 8px 0 0; 
+        /* to round the top right and left hand corner */
+        position: fixed; 
+        bottom: 0;
+        right: 0;
+        /* to fix the chatbox to the bottom of the screen, on the RHS*/
+    }
+
+    .chat_box p {
+        font-size: 15px;
+        font-family:'Noto Sans', sans-serif;
+        font-weight: 700;
+    }
+
+    .chat_icon {
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+    }
+
+} 
+/* closing bracket for media query */ 

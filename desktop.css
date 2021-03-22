@@ -1,0 +1,824 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 1226px) {
+    body {
+        margin: 0;
+        /* to remove gap surrounding the edge of the page */
+    }
+
+    .main {
+        width: 100%;
+        margin:auto;
+        font-size: 0;
+        /* font-size 0 to remove random gap between div elements as browser is registering inlines as words  */
+        overflow-x: hidden;
+        /* to prevent horizontal scrolling for elements going beyond the page */
+    }
+
+    .header {
+        width: 100%;
+        display: flex;
+        /* Flex allows the logo and nav content to appear side by side on page */
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 28px;
+        box-sizing: border-box;
+        position: fixed;
+        top: 0;
+        /* to make the nav bar sticky */
+        background-color: #FFFFFF;
+        z-index: 10;
+        /* to make the header and nav bar sit above the body elements */
+    }
+
+    .logo {
+        width: 110px;
+        height: 35px;
+        padding: 0 5px;   
+        cursor: pointer;
+    }
+
+    .nav_container {
+        width: calc(100% - 110px);
+        /* width of nav container is 100% minus the width of the logo */
+        display: flex;
+        justify-content: flex-end;
+        /* so the children in the container at on the RHS */
+        align-items: center;
+    }
+
+    .nav_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        padding: 0 10px;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+
+    .nav_button a {
+        text-decoration: none;
+        color: #000;
+        /* to remove underline and blue text colour for hyperlink */
+    }
+
+    .search_hamburger_container {
+        display: flex;
+        /* to enable the hamburger menu and search icon to be next to each other in mobile view */
+    }
+
+    .hamburger_menu {
+        display: none;
+        /* to hide the hamburger menu icon that will display for mobile */
+    }
+
+    .search_icon {
+        width: 20px;
+        height: 20px;
+        padding: 0 15px;
+        margin: 0 4px;
+        cursor: pointer;
+    }
+
+    .vertical_line { 
+        width: 2px;
+        height: 50px;
+        background-color: #D7D8De;
+        margin: 0 5px;
+    }
+
+    .lite_logo {
+        display: none;
+        /* logo for mobile and tablet view */
+    }
+
+    .log_in_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        padding: 10px 16px 10px 26px;
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .sign_up_donate_container {
+        display: flex;
+        align-items: center;
+    }
+
+    .sign_up_button {
+        width: 62px;
+        background-color: #000;
+        padding: 16px 32px;
+        margin: 0 6px;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        /* to make pointer arrow appear when hovering over the button */
+    }
+
+    .sign_up_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin: 0;
+        line-height: 1;
+    }
+    
+    .header_donate_button {
+        width: 83px;
+        display: flex;
+        align-items: center;
+        background-color: #001EFF;
+        padding: 16px 32px;
+        margin: 0 6px;
+        cursor: pointer;
+        /* to make pointer arrow appear when hovering over the button */
+    }
+
+    .header_donate_button p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin: 0 10px 0 0;
+        /* to create space between text and down arrow */
+        line-height: 1;
+    }
+
+    .donate_down_arrow {
+        width: 9px;
+        height: 6px;
+    }
+
+    .banner {
+        padding: 32px;
+        box-sizing: border-box; 
+        /* Border-box siing enables box to stay the same size when there is padding */
+        align-items: center; 
+        margin-top: 70px;
+        /* so the first section appears under the sticky navbar */
+    }
+
+    .banner_content_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /* so the 55% and 45% max out the 100% width of the parent, and the give monthly container wraps to the next row */
+    }
+
+    .banner_image_container {
+        width: 55%;
+    }
+
+    .banner_image {
+        width: 100%;
+    }
+
+    .banner_text_container {
+        width: 45%;
+        box-sizing: border-box;
+        padding: 8px 18px 24px 40px;
+        /* optimising code padding top right bottom left */
+    }
+
+    h2 {
+        width: auto;
+        height: auto;
+        font-size: 49px;
+        font-family: 'Anton', sans-serif;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+
+    .banner_text_container p { 
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        margin: 0 auto;
+    }
+
+    .give_monthly_container {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        margin-top:20px;
+        margin-bottom: 80px;
+    }
+
+    .give_monthly_button {
+        width: 148px;
+        height: 40px;
+        background-color:#0000001A ;
+        cursor: pointer;
+    }
+
+    .give_monthly_button p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .give_monthly_nav_container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .give_monthly_arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #0000001A;
+        cursor: pointer;
+    }
+
+    .give_monthly_page_number {
+        width: 91px;
+        height: 40px;
+        text-align: center;
+    }
+
+    .give_monthly_page_number p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .scrolling_banner {
+        width: 100%;
+        height: 37px;
+        background-color: black;
+    }
+
+    .scrolling_banner p {
+        font-size: 15px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        padding: 7.5px;
+        margin: 0 32px;
+    }
+
+    .firefighter_image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        /*so the image isn't stretched out*/
+    }
+
+    .fundraise {
+        width: 100%;
+        display:flex;
+        justify-content: space-between;  
+    }
+
+    .fundraise_text_container {
+        width: 50%;
+        /* to allow the text container to have a vairable width while the image to the right has a fixed width */
+        padding: 70px 36px 40px;
+        /* optimising code padding top, right & left, bottom */
+        box-sizing: border-box;
+        /* border-box allows the box to stay the same size when there is padding so the image on the left remains in the grid */
+    }
+
+    .fundraise_text p {
+        font-size: 24px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto 30px;
+    }
+
+    .donate_button {
+        width: 72px;
+        height: 18px;
+        background-color: #001EFF;
+        margin-top: 40px;
+        margin-right: 340px;
+        padding: 8px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .donate_button p {
+        color: white;
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+    }
+
+    .white_arrow {
+        width: 12px;
+        height: 9.83px;
+        padding-right: 8px;
+    }
+
+    .fundraise_image_container {
+        width: 50%;
+    }
+
+    .fundraise_image {
+        width: 100%;
+        height: 450px;
+        object-fit: cover;
+        /*so the image isn't stretched out*/
+    }
+
+    .stories {
+        display: flex;
+        align-items: stretch;
+    }
+
+    .stories_image_container {
+        width: 376px;
+    }
+
+    .stories_image {
+        width: 100%
+                /* the image downloaded is slightly different to the image that is used on the home page, that is why it appears to be zoomed in */
+    }
+
+    .stories_image_description {
+        width: 100%;
+        padding: 16px;
+        background-color:#000000 ;
+        box-sizing: border-box;
+    }
+
+    .stories_image_description p {
+        font-size: 14px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        margin: 0 auto;
+    }
+
+    .stories_text_container {
+        width: calc(100% - 376px);   
+        /* to create a variable width for the text container while the image container maintains fixed width */
+        padding: 24px 32px 24px 18px;
+        background-color: #001EFF;
+        box-sizing: border-box;
+        /* border-box allows the box to stay the same size when there is padding so the image on the left remains in the grid */
+        margin: 0 auto;
+        position: relative;
+        /* to enable the children of this parent div to have an absolute position - so the CTA container can stick to the top of this parent */
+    }
+
+    .stories_text_CTA_container {
+        height: 40px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        /* to stick the CTA container to the top of the parent div */
+        right: 32px;
+        /* to create a gap between the CTA container and the right edge of the parent div */
+    }
+
+    .stories_text_CTA {
+        width: 186px;
+        height: 40px;
+        background-color:#FFFFFF33;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .stories_text_CTA p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .stories_nav_container {
+        display: flex;
+    }
+
+    .stories_arrow {
+        width:40px;
+        height: 40px;
+        background-color:#FFFFFF33;
+        cursor: pointer;
+    }
+
+    .stories_page_number {
+        width: 88px;
+        height: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .stories_page_number p {
+        font-size: 12px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 0 auto;
+        padding:  8px 16px;
+        line-height: 25px;
+    }
+
+    .stories_text {
+        height: 100%;
+        /* to stretch the height of the text to stretch to 100% of the parent div*/
+        display: flex;
+        align-items: center;
+        /* to center the text in the parent box */
+    }
+
+    .stories_text p {
+        font-size: 24px;
+        color: #FFFFFF;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 100;
+        padding: 40px 35px;
+        margin: 0 auto;
+    }
+
+    b {
+        font-weight: 500;
+        /* global bold has been created to decrease the intensity of the <b></b> tag used in the HTML */
+    }
+
+    .articles {
+        width: 100%;
+        padding: 60px 0;
+    }
+
+    .project_heading_container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        /* to put the title on the LHS, and the arrows on the RHS of the parent */
+        padding: 0 30px;
+        box-sizing: border-box;
+        align-items: center;
+    }
+
+    .project_heading_container p {
+        font-size: 24px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+    }
+
+    .arrow_container {
+        display: flex;
+    }
+
+    .articles_arrow {
+        width: 40px;
+        height: 40px;
+        background-color: #0000001A;
+        margin-left: 20px;
+        /* to create a space between the two arrow boxes */
+        cursor: pointer;
+    }
+
+    .articles_page_number {
+        display: none;
+        /* articles page number is only displayed in mobiled view */
+    }
+
+    .project_container {
+        width: 25%;
+        display: flex;
+        padding: 0 20px;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .project {
+        margin: 0 10px;
+    }
+
+    .project_image {
+        min-width: 290px;
+        max-height: 380px;
+        min-height: 290px;
+        max-height: 380px;
+        /* to enable the images to be responsive when the screen size changes */
+        margin-bottom: 12px;
+    }
+
+    .project p b {
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    .project p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto;
+    }
+
+    .newsletter {
+        width: 100%;
+        height: 423px;
+        text-align: center;
+        /* To center align the text in the div tag */
+    }
+
+    h3 {
+        font-size: 32px;
+        font-family: 'Anton', sans-serif;
+        margin-bottom: 28px;
+        letter-spacing: 3px;
+        /* to give the letters space so they aren't as cramped */
+        font-weight: 500;
+    }
+
+    .newsletter p {
+        font-size: 20px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+    }
+
+    .form_text {
+        height: 48px;
+        border: 1px solid;
+        /* to create solid outline around div containing text */
+        border-color: black;
+        padding: 6px 4px 6px 10px;
+        box-sizing: border-box;
+        border-radius: 3px;
+        /* to round the edges */
+        width: 825px;
+        margin: 0 auto 10px;
+        /* to center the box horizontally within its parent's box */
+        text-align: left;
+    }
+
+    .form_text p {
+        font-size: 14px;
+        color: grey;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
+        line-height: 35px;
+        /* to horitzontally align the text to the form box */
+        margin: 0 auto;
+        /* to horizontally align the form text */
+    }
+
+    .count_me_in_button {
+        width: 141px;
+        height: 51px;
+        background-color: #001EFF;
+        border: 2px solid;
+        border-color: #001EFF;
+        padding: 0 15px;
+        margin: 20px auto 35px;
+        /* to center align the button within it's parent's box and create gaps for the top and bottom*/
+        cursor: pointer;
+    }
+
+    .count_me_in_button p {
+        color: #FFFFFF;
+        font-size: 16px;
+        font-family:'Anton', sans-serif;
+        letter-spacing: 2px;
+        /* so letters aren't cramped together */
+        margin: 0 auto;
+        line-height: 50px;
+        /* to horizontally align the text in the button */
+    }
+
+    .terms_and_conditions p {
+        width: 814px;
+        font-size: 14px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto 14px;
+        /* to center align the text within it's parent's box */
+    }
+
+    .terms_and_conditions a {
+        color: black;
+        font-weight: 600;
+    }
+
+    .sponsors {
+        width: 100%;
+        background-color: #f5f5f6;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px;
+        box-sizing: border-box;
+    }
+
+    .sponsors_container h3 {
+        font-size: 11px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+        margin: 0 auto;
+        /* to remove space created by text height */
+        letter-spacing: 1px;
+        /* to remove wide letter spacing */
+    }
+
+    .partner_logo {
+        min-width: 110px;
+        max-width: 140px;
+        /* to make logos responsive as device size changes */
+        padding: 10px 20px 10px 0;
+    }
+
+    .partner_logo:last-child {
+        padding-right: 0;
+        /* to remove padding right on the last logo in the set */
+    }
+
+    .sponsors_container {
+        padding: 0 7px;
+    }
+
+    .logo_container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        /* to horizontally center the logos */
+    }
+
+    .footer {
+        width: 100%;
+        /* removed the height of 518px to allow footer to size to content */
+        background-color: #151515;
+        padding: 28px;
+        box-sizing: border-box;
+    }
+
+    .footerbox {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h4 {
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        font-size: 16px;
+        font-family:'Anton', sans-serif;
+        font-weight: 300;
+        margin: 0 auto 7px auto;
+        /* to remove extra space created by auto line height*/
+        /* to create a gap between the column heading and links below */
+    }
+
+    .footer_column a {
+        color: #ffffff;;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        text-decoration: none;
+        /* to remove underline from hyperlink */
+    }
+
+    .footer_column {
+        width: 20%;
+        padding: 0 28px 28px 0;
+        box-sizing: border-box;
+    }
+
+    .footer_column p {
+        margin: 0 auto;
+        /* to remove extra space created by auto line height */
+        line-height: 1;
+        margin: 8px 0;
+    }
+
+    .footer_column_container {
+        display: flex;
+    }
+
+    .footer_column_row{
+        margin-bottom: 35px;
+    }
+
+    .social_media_icon_container {
+        display: flex;
+    }
+
+    .social_media_icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 14px;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        /* to create white circumference around icons */
+        background-color: #ffffff;
+        /* to create white background for social media icons that are transparent */
+    }
+
+    .copyright p {
+        color: #ffffff;;
+        font-size: 15px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 200;
+        margin: 0 auto 28px;
+        /* to provide space so the copyright is not hidden behind the contact us chat button at the very bottom */
+    }
+
+    .chat_box {
+        width: 226px;
+        height: 50px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 12px;
+        /* to give the box a shadow (rather than an outline) */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 15px;
+        margin-right: 16px;
+        /* to provide a space between the chat box and edge of page */
+        border-radius: 8px 8px 0 0; 
+        /* to round the top right and left hand corner */
+        position: fixed; 
+        bottom: 0;
+        right: 0;
+        /* to fix the chatbox to the bottom of the screen, on the RHS*/
+        cursor: pointer;
+    }
+
+    .chat_box p {
+        font-size: 15px;
+        font-family:'Noto Sans', sans-serif;
+        font-weight: 700;
+    }
+
+    .chat_icon {
+        width: 24px;
+        height: 24px;
+        padding: 5px;
+    }
+
+/* Specific CSS for support_us.html below this point*/
+
+    .page_header{
+        padding: 32px 28px;
+        background-color: #3F4B55;
+        margin-top: 70px;
+        /* so the first section appears under the sticky navbar */
+    }
+
+    h1 {
+        color: #FFFFFF;
+        letter-spacing: 2px;
+        /* to create more space between the lines */
+        line-height: 1;
+        font-size: 80px;
+        font-family:'Anton', sans-serif;
+        font-weight: 400;
+        margin: 0 auto 30px;
+        /* to remove extra space created by auto line height*/
+    }
+
+    .page_header h4 {
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        line-height: 1;
+        font-size: 20px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 500;
+        margin: 0 0 18px;
+        /* to remove extra space created by auto line height and also create a space at the bottom of the header*/
+    }
+
+    .donate_type {
+        padding: 60px 28px 0 28px;
+    }
+
+    .donate_type h2 {
+        letter-spacing: 1px;
+        /* to create more space between the lines */
+        font-size: 32px;
+        font-family:'Anton', sans-serif;
+        margin: 14px 0; 
+    }
+
+/* Specific CSS for about_us below this point */
+
+} 
+/* closing bracket for media query */ 
+
+
+
+
+
+
+
+
+
+
