@@ -62,6 +62,14 @@
         /* to remove underline and blue text colour for hyperlink */
     }
 
+    .nav_button a:hover {
+        color: #001EFF;
+        text-decoration: underline 3px #001EFF;
+        text-underline-offset: 20px;
+        transition: 0.8s;
+        /* so the nav bar items turn blue and are underlined when the mouse hovers over them */
+    }
+
     .search_hamburger_container {
         display: flex;
         /* to enable the hamburger menu and search icon to be next to each other in mobile view */
@@ -769,7 +777,7 @@
     .page_header{
         padding: 32px 28px;
         background-color: #3F4B55;
-        margin-top: 70px;
+        margin: 70px 0 64px;
         /* so the first section appears under the sticky navbar */
     }
 
@@ -797,7 +805,8 @@
     }
 
     .donate_type {
-        padding: 60px 28px 0 28px;
+        padding: 0 28px 0 28px;
+        margin: 0 0 74px;
     }
 
     .donate_type h2 {
@@ -806,6 +815,62 @@
         font-size: 32px;
         font-family:'Anton', sans-serif;
         margin: 14px 0; 
+    }
+
+    .donate_type_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .donate_type_box {
+        outline: 1px solid black;
+        padding: 16px;
+        margin: 0 7px;
+        max-width: 534px;
+    }
+
+    .donate_type_box h4 {
+        color: #000000;
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+    }
+
+    .donate_type_box p {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+    }
+
+    .donate_type_box a {
+     text-decoration: underline;
+     font-weight: 700; 
+    }
+
+    .employer_donation {
+        padding: 0 28px;
+        margin: 0 0 74px;
+    }
+
+    .employer_donation p {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 24px; 
+    }
+
+    .employer_donation a {
+        text-decoration: underline;
+        font-weight: 700; 
+        color: #000000;
+    }
+
+    p.mail_address {
+        line-height: 1;
+        margin-bottom: 10px;
+        /* to make the mail address lines closer together */
     }
 
 /* Specific CSS for about_us below this point */
