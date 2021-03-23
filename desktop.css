@@ -772,7 +772,7 @@
         padding: 5px;
     }
 
-/* Specific CSS for support_us.html below this point*/
+/* Specific CSS for support_us.html below this point. Some of these CSS rules will also apply to the about_us.html*/
 
     .page_header{
         padding: 32px 28px;
@@ -874,7 +874,25 @@
     }
 
 /* Specific CSS for about_us below this point */
+    .team_introduction {
+        padding: 0 28px 0 28px;
+        margin: 0 0 74px;
+    }  
 
+    .team_introduction h2 {
+        color: #000000;
+        letter-spacing: 1px;
+        /* to create more space between the lines */
+        font-size: 32px;
+        font-family:'Anton', sans-serif;
+        margin: 14px 0; 
+    }   
+    .team_introduction p {
+        font-size: 20px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+ 
 } 
 /* closing bracket for media query */ 
 
