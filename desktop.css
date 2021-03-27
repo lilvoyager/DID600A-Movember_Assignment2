@@ -47,6 +47,10 @@
         align-items: center;
     }
 
+    .nav_container__links {
+        display: flex;
+    }
+
     .nav_button p {
         font-size: 16px;
         font-family: 'Overpass', sans-serif;
@@ -66,8 +70,15 @@
         color: #001EFF;
         text-decoration: underline 3px #001EFF;
         text-underline-offset: 20px;
-        transition: 0.8s;
+        transition: 0.15s ease;
         /* so the nav bar items turn blue and are underlined when the mouse hovers over them */
+    }
+
+    .nav_button--active a {
+        color: #001EFF;
+        text-decoration: underline 3px #001EFF;
+        text-underline-offset: 20px;
+        /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
     }
 
     .search_hamburger_container {
@@ -774,11 +785,18 @@
 
 /* Specific CSS for support_us.html below this point. Some of these CSS rules will also apply to the about_us.html*/
 
-    .page_header{
+    .page_header {
         padding: 32px 28px;
         background-color: #3F4B55;
-        margin: 70px 0 64px;
+        margin: 70px 0;
         /* so the first section appears under the sticky navbar */
+    }
+
+    .page_header__content {
+        min-width: 320px;
+        max-width: 1280px;
+        margin: 0 auto;
+        /* To make the content centred on the page as the page resizes so it is responsive */
     }
 
     h1 {
@@ -809,6 +827,13 @@
         margin: 0 0 74px;
     }
 
+    .donate_type__content {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 1280px;
+        /* To make the content centred on the page as the page resizes so it is responsive */
+    }
+
     .donate_type h2 {
         letter-spacing: 1px;
         /* to create more space between the lines */
@@ -819,7 +844,6 @@
 
     .donate_type_container {
         display: flex;
-        justify-content: center;
     }
 
     .donate_type_box {
@@ -852,6 +876,13 @@
     .employer_donation {
         padding: 0 28px;
         margin: 0 0 74px;
+    }
+
+    .employer_donation__content {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 1280px;
+        /* To make the content centred on the page as the page resizes so it is responsive */
     }
 
     .employer_donation p {

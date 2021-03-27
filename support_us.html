@@ -9,7 +9,6 @@
     <link href="desktop.css" rel="stylesheet"> 
     <link href="tablet.css" rel="stylesheet">  
     <link href="phone.css" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:wght@400;700&family=Overpass:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 <!-- end of head tag -->
@@ -19,33 +18,36 @@
         <!-- main body -->
         <div class="header">
             <a href="index.html"><img class="logo" src="images/Logo-Movember.jpeg"></a>
-            <ul class="nav_container">
-                <li class="nav_button"> 
-                    <a href="support_us.html">
-                        <p>SUPPORT US</p>
-                    </a>
-                </li>
-                <li class="nav_button"> 
-                    <a href="about_us.html">
-                    <p>ABOUT US</p>
-                    </a>
-                </li>
-                <li class="nav_button">
-                    <a href="#">
-                    <p>MEN'S HEALTH</p>
-                    </a>
-                </li>
-                <li class="nav_button">
-                    <a href="#">
-                    <p>STORIES</p>
-                    </a>
-                </li> 
-                <li class="nav_button">
-                    <a href="#">
-                    <p>VOLUNTEER</p>
-                    <!-- to create an unordered list containing 5 links, this additional nav item will be added -->
-                    </a>
-                </li>
+            <div class="nav_container">
+                <ul class="nav_container__links">
+                    <li class="nav_button nav_button--active"> 
+                        <!-- adding another class to this nav button so that it goes blue when selected -->
+                        <a href="support_us.html">
+                            <p>SUPPORT US</p>
+                        </a>
+                    </li>
+                    <li class="nav_button"> 
+                        <a href="about_us.html">
+                        <p>ABOUT US</p>
+                        </a>
+                    </li>
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>MEN'S HEALTH</p>
+                        </a>
+                    </li>
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>STORIES</p>
+                        </a>
+                    </li> 
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>VOLUNTEER</p>
+                        <!-- to create an unordered list containing 5 links, this additional nav item will be added -->
+                        </a>
+                    </li>                                       
+                </ul>
                 <div class="search_hamburger_container">
                 <!-- to enable the hamburger menu to be next to the search icon in mobile view, they will be contained in a parent container-->
                     <a href="index.html"><img class="hamburger_menu" src="images/hamburger_icon.png"></a>
@@ -71,50 +73,57 @@
                     </div>
                 </div>
                 <!-- the sign up button and donate button are in their own container to allow the two buttons to stay together when they move around to different positions in the Nav bar in mobile, tablet and desktop view -->
-            </ul>
+            </div>
         </div>
         <!-- end of header section -->
         
         <div class="page_header">
-            <h1>WAYS TO DONATE</h1>
-            <h4>Here's how to donate to Movember's groundbreaking men's health projects, year-round</h4>
+            <div class="page_header__content">
+                <h1>WAYS TO DONATE</h1>
+                <h4>Here's how to donate to Movember's groundbreaking men's health projects, year-round</h4>
+            </div>
         </div>
         <!-- end of page header -->
        
         <div class="donate_type">
-            <h2>ONE-OFF DONATIONS</h2>
-            <div class="donate_type_container">
-                <div class="donate_type_box">
-                <h4>Donate to a Mo Bro or Mo Sister's efforts</h4>
-                <p>Head on over to out <a>donation page</a> and search by name to make a donation.</p>
-                </div>
-                <div class="donate_type_box">
-                    <h4>Donate to Movember</h4>
-                    <p>You can make a <a>donation straight to Movember</a> any time of the year.</p>
+            <div class="donate_type__content">
+                <h2>ONE-OFF DONATIONS</h2>
+                <div class="donate_type_container">
+                    <div class="donate_type_box">
+                        <h4>Donate to a Mo Bro or Mo Sister's efforts</h4>
+                        <p>Head on over to out <a>donation page</a> and search by name to make a donation.</p>
+                    </div>
+                    <div class="donate_type_box">
+                        <h4>Donate to Movember</h4>
+                        <p>You can make a <a>donation straight to Movember</a> any time of the year.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- end of first donate_type section -->
 
         <div class="donate_type">
-            <h2>MONTHLY DONATIONS</h2>
-            <div class="donate_type_container">
-                <div class="donate_type_box">
-                    <h4>Support men's health year-round</h4>
-                    <p>Make a <a>monthly donation</a> to save men's lives today, and into the future.</p>
+            <div class="donate_type__content">
+                <h2>MONTHLY DONATIONS</h2>
+                <div class="donate_type_container">
+                    <div class="donate_type_box">
+                        <h4>Support men's health year-round</h4>
+                        <p>Make a <a>monthly donation</a> to save men's lives today, and into the future.</p>
+                    </div>
                 </div>
-                <div class="donate_type_box"></div>
             </div>
         </div>
         <!-- end of second donate_type section -->
         <div class="employer_donation">
-            <p>A number of companies operate a fund matching program so that the money you donate or raise is doubled by them. Ask your employer to support your efforts and fund match the amount of your donation. Chances are, if you’re standing for change, the company you work for will stand behind you.</p>
-            <p>If your employer needs us to fill out a <a>Dollar Matching Form</a> or verify your donation contact us at <a href="mailto:dollarmatch@movember.com" target="blank">dollarmatch@movember.com</a></p>
-            <p>To send in either a dollar matching form or cheque, mail to:</p>
-            <p class="mail_address">Movember</p>
-            <p class="mail_address">PO Box 60</p>
-            <p class="mail_address">East Melbourne</p>
-            <p class="mail_address">VIC 8002 Australia</p>
+            <div class="employer_donation__content">
+                <p>A number of companies operate a fund matching program so that the money you donate or raise is doubled by them. Ask your employer to support your efforts and fund match the amount of your donation. Chances are, if you’re standing for change, the company you work for will stand behind you.</p>
+                <p>If your employer needs us to fill out a <a>Dollar Matching Form</a> or verify your donation contact us at <a href="mailto:dollarmatch@movember.com" target="blank">dollarmatch@movember.com</a></p>
+                <p>To send in either a dollar matching form or cheque, mail to:</p>
+                <p class="mail_address">Movember</p>
+                <p class="mail_address">PO Box 60</p>
+                <p class="mail_address">East Melbourne</p>
+                <p class="mail_address">VIC 8002 Australia</p>
+            </div>
         </div>
     </div>
     <!-- end of main section -->

@@ -9,8 +9,8 @@
     <link href="desktop.css" rel="stylesheet"> 
     <link href="tablet.css" rel="stylesheet">  
     <link href="phone.css" rel="stylesheet"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:wght@400;700&family=Overpass:wght@100;200;300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Lightbox/css/lightbox.css">
 </head>
 <!-- end of head tag -->
 
@@ -19,33 +19,36 @@
         <!-- main body -->
         <div class="header">
             <a href="index.html"><img class="logo" src="images/Logo-Movember.jpeg"></a>
-            <ul class="nav_container">
-                <li class="nav_button"> 
-                    <a href="support_us.html">
-                        <p>SUPPORT US</p>
-                    </a>
-                </li>
-                <li class="nav_button"> 
-                    <a href="about_us.html">
-                    <p>ABOUT US</p>
-                    </a>
-                </li>
-                <li class="nav_button">
-                    <a href="#">
-                    <p>MEN'S HEALTH</p>
-                    </a>
-                </li>
-                <li class="nav_button">
-                    <a href="#">
-                    <p>STORIES</p>
-                    </a>
-                </li> 
-                <li class="nav_button">
-                    <a href="#">
-                    <p>VOLUNTEER</p>
-                    <!-- to create an unordered list containing 5 links, this additional nav item will be added -->
-                    </a>
-                </li>
+            <div class="nav_container">
+                <ul class="nav_container__links">
+                    <li class="nav_button"> 
+                        <a href="support_us.html">
+                            <p>SUPPORT US</p>
+                        </a>
+                    </li>
+                    <li class="nav_button nav_button--active"> 
+                        <!--                         <!-- adding another class to this nav button so that it goes blue when selected --> -->
+                        <a href="about_us.html">
+                        <p>ABOUT US</p>
+                        </a>
+                    </li>
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>MEN'S HEALTH</p>
+                        </a>
+                    </li>
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>STORIES</p>
+                        </a>
+                    </li> 
+                    <li class="nav_button">
+                        <a href="#">
+                        <p>VOLUNTEER</p>
+                        <!-- to create an unordered list containing 5 links, this additional nav item will be added -->
+                        </a>
+                    </li>                                       
+                </ul>
                 <div class="search_hamburger_container">
                 <!-- to enable the hamburger menu to be next to the search icon in mobile view, they will be contained in a parent container-->
                     <a href="index.html"><img class="hamburger_menu" src="images/hamburger_icon.png"></a>
@@ -71,21 +74,35 @@
                     </div>
                 </div>
                 <!-- the sign up button and donate button are in their own container to allow the two buttons to stay together when they move around to different positions in the Nav bar in mobile, tablet and desktop view -->
-            </ul>
+            </div>
         </div>
         <!-- end of header section -->
 
         <div class="page_header">
-            <h1>WHO WE ARE</h1>
-            <h4>We are the leading charity changing the face of men’s health. We know what works for men – and what doesn’t.</h4>
+            <div class="page_header__content">
+                <h1>WHO WE ARE</h1>
+                <h4>We are the leading charity changing the face of men’s health. We know what works for men – and what doesn’t.</h4>
+            </div>
         </div>
         <!-- end of page header -->
 
         <div class="team_introduction">
-            <h2>Meet the team</h2>
+            <h2>Meet the leadership team</h2>
             <p>We exist to help men live happier, healthier, longer lives – this is what drives every single one of our 1,250 men’s health projects.</p>
             <div class="team_photos">
-                
+                <a href="lightbox/images/team_photo_large_01.jpg" data-lightbox="team_photos_set" data-title="Sarah, CEO">
+                    <!-- large photo to be opened when image is selected -->
+                    <img class="team_photo" src="lightbox/images/team_photo_small_01.jpg" alt="" />
+                    <!-- thumbnail image -->
+                </a>
+                <a href="lightbox/images/team_photo_large_02.jpg" data-lightbox="team_photos_set" data-title="Josh, CTO"><img class="team_photo" src="lightbox/images/team_photo_small_02.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_03.jpg" data-lightbox="team_photos_set" data-title="Zuri, CFO"><img class="team_photo" src="lightbox/images/team_photo_small_03.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_04.jpg" data-lightbox="team_photos_set" data-title="Elijah, Head of People"><img class="team_photo" src="lightbox/images/team_photo_small_04.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_05.jpg" data-lightbox="team_photos_set" data-title="Jennifer, Head of Product"><img class="team_photo" src="lightbox/images/team_photo_small_05.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_06.jpg" data-lightbox="team_photos_set" data-title="Tyrell, Head of Engineering"><img class="team_photo" src="lightbox/images/team_photo_small_06.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_07.jpg" data-lightbox="team_photos_set" data-title="Will, Creative Director"><img class="team_photo" src="lightbox/images/team_photo_small_07.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_08.jpg" data-lightbox="team_photos_set" data-title="Leonardo, International Relations Director"><img class="team_photo" src="lightbox/images/team_photo_small_08.jpg" alt="" /></a>
+                <a href="lightbox/images/team_photo_large_09.jpg" data-lightbox="team_photos_set" data-title="Natalie, Community Relations Director"><img class="team_photo" src="lightbox/images/team_photo_small_09.jpg" alt="" /></a>
             </div>
         </div>
         <!-- end of meet the team section -->
@@ -220,6 +237,9 @@
         <img class="chat_icon" src="images/chat_bubble.png">
     </div>
     <!-- end of chat box section -->
+
+<script src="Lightbox/js/lightbox-plus-jquery.js"></script>
+<!-- The javascipt script to run the lightbox -->
 
 </body>
 <!-- end of body section -->
