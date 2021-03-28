@@ -873,6 +873,17 @@
         padding: 16px;
         margin: 0 7px;
         max-width: 534px;
+        /* to enable the box to have responsive width */
+    }
+
+    .donate_type_box:first-child {
+        margin-left: 0;
+        /* to remove right margin gap on the first box of the row */
+    }
+    
+    .donate_type_box:last-child {
+        margin-right: 0;
+        /* to remove left margin gap on the last box of the row */
     }
 
     .donate_type_box h4 {
