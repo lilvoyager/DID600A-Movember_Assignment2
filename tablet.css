@@ -17,10 +17,10 @@
 
     .header {
         width: 100%;
+        height: 68px;
         display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */
         justify-content: space-between;
-        align-items: center;
         padding: 10px;
         box-sizing: border-box;
         position: fixed;
@@ -37,28 +37,82 @@
         padding: 0 5px;   
     }
 
-    .nav_container {
-        width: 100%;
-        /* container width is now 100% as children elements are not stacked on top of each other instead of side-by-side. Flex is no longer displayed to facilitate this*/
+    nav {
+        position: relative;
         display: flex;
+        align-items: center;
         justify-content: flex-end;
         /* to push nav elements to RHS */
     }
 
-    .nav_container__links {
-        display: none;
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    .nav_button { 
-        display: none;
+    ul.topnav {
+        position: absolute;
+        top: 12px;
+        right: 0;
+        margin: 0;
+        /* offsetting the <ul> margin as it is automatically indented */
+        height: 25px;
+        width: 25px;
+        overflow: hidden;
+        /* to hide the links underneath the hamburger icon until clicked */
+        padding: 0;
+        cursor: pointer;
+        user-select: none;
+        /* remove highlight around hamburger */
     }
 
-    .nav_button p {
+    ul.topnav li.hamburger a {
+        height: 100%;
+        color: #000000;
+        font-size: 25px;
+        text-decoration: none;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* to display the hamburger icon */
+    }
+
+    .topnav.responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 150px;
+        height: 300px;
+    }
+
+    .topnav.responsive li.hamburger {
+        width: 25px;
+        padding: 0;
+        margin-bottom: 21px;
+    }
+
+    .topnav.responsive li {
+        text-align: right;
+        background-color: #ffffff;
+        /* background color is on the li items instead of topnav responsive because it would cover the section adjacent it */
+        padding: 12px;
+        /* extra spacing between the li items */
+        width: 100%;
+        /* To fit the width of the topnav responsive */
+    }
+
+    .nav_button a {
+        text-decoration: none;
+        color: #000;
+        /* to remove underline and blue text colour for hyperlink */
         font-size: 16px;
         font-family: 'Overpass', sans-serif;
         font-weight: 400;
         padding: 0 10px;
-        /* to hide the nav buttons as they will not be in the hamburger menu */
+        margin: 0 auto;
+        cursor: pointer;
     }
 
     .nav_button_stories {
@@ -66,28 +120,14 @@
         /*For the purposes of this assignment, the 'stories' button will never appear as the Movember site has a separate CSS for 'widedesktop' where the story button only appears when width of screen is >1085px. This would require a 4th CSS */     
     }
 
-    .search_hamburger_container {
-        display: flex;
-        align-items: center;
-        /* to align the search and hambuger menu to the horiczntal center */
-        order: 3; 
-        /* to reorder the log in button, sign up & donate buttons, search button & hamburger menu */
-        margin-left: 16px;
-    }
-
-    .hamburger_menu {
-        width: 22px;
-        height: 22px;
-        /* to make the hamburger menu for mobile */
-        left: 0;
-    }
-
     .search_icon {
         width: 20px;
         height: 20px;
-        padding: 0 15px;
+        padding: 0 40px 0 15px; 
+        /* extra padding on right is to account for the hamburger menu */
         margin: 0 4px;
-        /* to create space between the hamburger menu and the search icon*/  
+        /* to create space between the hamburger menu and the search icon*/ 
+        order: 3; 
     }
 
     .vertical_line { 
