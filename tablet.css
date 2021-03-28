@@ -83,12 +83,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        width: 150px;
+        width: 200px;
         height: 300px;
     }
 
     .topnav.responsive li.hamburger {
-        width: 25px;
+        width: fit-content; 
+        /* To make the width of the <li> item the same as the hamburger icon */
         padding: 0;
         margin-bottom: 21px;
     }
