@@ -887,5 +887,196 @@
         padding: 5px;
     }
 
+    /* Shared CSS rules in sub pages below this point (both for support_us.html and about_us.html */
+    .page_header {
+        padding: 32px 28px;
+        background-color: #3F4B55;
+        margin: 127px 0 60px;
+        /* so the first section appears under the sticky navbar */
+    }
+
+    .page_header__content {
+        min-width: 320px;
+        max-width: 1280px;
+        margin: 0 auto;
+        /* To make the content centred on the page as the page resizes so it is responsive */
+    }
+
+    h1 {
+        color: #FFFFFF;
+        letter-spacing: 2px;
+        /* to create more space between the lines */
+        line-height: 1;
+        font-size: 40px;
+        font-family:'Anton', sans-serif;
+        font-weight: 400;
+        margin: 0 auto 30px;
+        /* to remove extra space created by auto line height*/
+    }
+
+    .page_header h4 {
+        color: #FFFFFF;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 500;
+        margin: 0 0 18px;
+        /* to remove extra space created by auto line height and also create a space at the bottom of the header*/
+    }
+
+    /* Specific CSS for support_us.html below this point.*/
+    .donate_type {
+        padding: 0 28px 0 28px;
+        margin: 0 0 74px;
+    }
+
+    .donate_type__content {
+        margin: 0 auto;
+        /* To make the content centred on the page as the page resizes so it is responsive */
+    }
+
+    .donate_type h2 {
+        letter-spacing: 1px;
+        /* to create more space between the lines */
+        font-size: 24px;
+        font-family:'Anton', sans-serif;
+        margin: 14px 0; 
+    }
+
+
+    .donate_type_box {
+        outline: 1px solid black;
+        padding: 16px;
+        margin: 0 0 30px;
+        max-width: 1200px;
+        /* to enable the donate type box to have responsive width */
+    }
+
+    .donate_type_box h4 {
+        color: #000000;
+        font-size: 16px;
+        font-weight: 700;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+    }
+
+    .donate_type_box p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+    }
+
+    .donate_type_box a {
+    text-decoration: underline;
+    font-weight: 700; 
+    }
+
+    .employer_donation {
+        padding: 0 28px;
+        margin: 0 0 74px;
+    }
+
+    .employer_donation__content {
+        margin: 0 auto;
+        min-width: 320px;
+        max-width: 1280px;
+        /* To make the content centred on the page as the page resizes so it is responsive */
+    }
+
+    .employer_donation p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 24px; 
+    }
+
+    .employer_donation a {
+        text-decoration: underline;
+        font-weight: 700; 
+        color: #000000;
+    }
+
+    p.mail_address {
+        line-height: 1;
+        margin-bottom: 10px;
+        /* to make the mail address lines closer together */
+    }
+
+    /* Specific CSS for about_us.html below this point */
+    .team_introduction {
+        padding: 0 28px 0 28px;
+        margin: 0 0 74px;
+        min-width: 320px;
+        max-width: 1280px;
+        margin: 0 auto;
+        /* To make the content centred on the page as the page resizes so it is responsive */
+    }  
+
+    .team_introduction h2 {
+        color: #000000;
+        letter-spacing: 1px;
+        /* to create more space between the lines */
+        font-size: 24px;
+        font-family:'Anton', sans-serif;
+        margin: 14px 0; 
+    }   
+    .team_introduction p {
+        font-size: 16px;
+        font-weight: 300;
+        font-family: 'Overpass', sans-serif;
+        margin: 0 0 14px; 
+    }
+
+    .team_photos {
+        display: flex;
+        flex-wrap: wrap;
+        /* to display the team photos next to each other */
+        margin: 0 0 40px;
+    }
+
+    .team_photos__container {
+        width: 20%;
+        margin: 20px 40px;
+        /* to create space between the team photos  */
+    }
+
+    .team_photo {
+        width: 100%;
+        margin: 0 0 10px;
+        filter: opacity(0.85) grayscale(5%); 
+        transition: 0.4s;
+        /* image at 80% opacity and slightly less vibrant when not selected / hovered */
+    }
+
+    .team_photo:hover{
+        filter: opacity(1) grayscale(0%) drop-shadow(2px 2px 8px gray);
+        transform: scale(1.05);
+        position: relative; 
+        z-index: 1;
+        /* to give the image a drop shadow, and ensure that the image stays above the other images when hovered-over */
+    }
+
+    .team_photos__container p b {
+        font-size: 18px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 600;
+        margin: 0 auto;
+    }
+
+    .team_photos__container p {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 300;
+        margin: 0 auto;
+    }
+
+    .team_photos__container a {
+        text-decoration: none;
+        color: #000000;
+        /* to remove underline under team names and position descriptions */
+    }
+
 } 
 /* closing bracket for media query */ 
