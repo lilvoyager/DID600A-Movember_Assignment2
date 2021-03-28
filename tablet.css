@@ -80,8 +80,6 @@
         height: 22px;
         /* to make the hamburger menu for mobile */
         left: 0;
-        order: 2;
-        /* to flip the order of the search icon and the hamburger menu around */
     }
 
     .search_icon {
@@ -89,9 +87,7 @@
         height: 20px;
         padding: 0 15px;
         margin: 0 4px;
-        /* to create space between the hamburger menu and the search icon*/
-        order: 1;
-        /* to flip the order of the search icon and the hamburger menu around */
+        /* to create space between the hamburger menu and the search icon*/  
     }
 
     .vertical_line { 
