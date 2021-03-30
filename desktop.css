@@ -103,16 +103,6 @@
         /* to add another class to the nav_button that is currently active so it is underline and the text is blue */
     }
 
-    /* .search_hamburger_container {
-        display: flex;
-        /* to enable the hamburger menu and search icon to be next to each other in mobile view */
-    
-
-    /* .hamburger_menu {
-        display: none;
-        /* to hide the hamburger menu icon that will display for mobile */
-    
-
     .search_icon {
         width: 20px;
         height: 20px;
