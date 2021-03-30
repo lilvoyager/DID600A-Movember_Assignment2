@@ -968,8 +968,8 @@
     }
 
     .donate_type_box a {
-    text-decoration: underline;
-    font-weight: 700; 
+        text-decoration: underline;
+        font-weight: 700; 
     }
 
     .employer_donation {
@@ -1036,7 +1036,8 @@
     }
 
     .team_photos__container {
-        width: 20%;
+        width: 30%;
+        max-width: 250px;
         margin: 20px 40px;
         /* to create space between the team photos  */
     }
@@ -1044,17 +1045,7 @@
     .team_photo {
         width: 100%;
         margin: 0 0 10px;
-        filter: opacity(0.85) grayscale(5%); 
-        transition: 0.4s;
-        /* image at 80% opacity and slightly less vibrant when not selected / hovered */
-    }
-
-    .team_photo:hover{
-        filter: opacity(1) grayscale(0%) drop-shadow(2px 2px 8px gray);
-        transform: scale(1.05);
-        position: relative; 
-        z-index: 1;
-        /* to give the image a drop shadow, and ensure that the image stays above the other images when hovered-over */
+        /* no image effects for tablet and mobile */
     }
 
     .team_photos__container p b {

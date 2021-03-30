@@ -47,6 +47,7 @@
         flex-wrap: wrap;
         /* so the sign up and donate button appear on the next row */
         position: relative;
+        /* so the items in the navbar sit outside of the header, and does not affect the width of the header when selected */
     }
 
     .topnav {
@@ -55,7 +56,9 @@
 
     ul.topnav {
         position: absolute;
+                /* so the items in the navbar sit outside of the header, and does not affect the width of the header when selected */
         top: 10px;
+        /* so the hamburger button sits 10px down from the top of the page */
         left: 0;
         margin: 0;
         /* offsetting the <ul> margin as it is automatically indented */
@@ -142,12 +145,15 @@
         /* this line is only present in the desktop view to separate the search icon and log in button */
     }
 
-    .lite_logo {
-        width: 75px;
-        height: 18px;
+    .lite_logo__link {
         margin: auto 0;
         /* to horitontally  align*/
         order: 3;
+    }
+
+    .lite_logo {
+        width: 75px;
+        height: 18px;
     }
 
     .log_in_button {
@@ -805,18 +811,18 @@
         /* to remove underline from hyperlink */
     }
 
-    .footer_column {
-        width: 100%;
-        /* column items stretch across the entire screen for mobile */
-        padding: 0 24px 24px 0;
-        box-sizing: border-box;
-    }
-
     .footer_column p {
         margin: 0 auto;
         /* to remove extra space created by auto line height */
         line-height: 1;
         margin: 8px 0;
+    }
+
+    .footer_column {
+        width: 100%;
+        /* column items stretch across the entire screen for mobile */
+        padding: 0 24px 24px 0;
+        box-sizing: border-box;
     }
 
     .footer_column_container {
@@ -1037,29 +1043,20 @@
     }
 
     .team_photos__container {
-        width: 20%;
-        margin: 20px 40px;
+        width: 40%;
+        max-width: 220px;
+        margin: 20px 20px;
         /* to create space between the team photos  */
     }
 
     .team_photo {
         width: 100%;
         margin: 0 0 10px;
-        filter: opacity(0.85) grayscale(5%); 
-        transition: 0.4s;
-        /* image at 80% opacity and slightly less vibrant when not selected / hovered */
-    }
-
-    .team_photo:hover{
-        filter: opacity(1) grayscale(0%) drop-shadow(2px 2px 8px gray);
-        transform: scale(1.05);
-        position: relative; 
-        z-index: 1;
-        /* to give the image a drop shadow, and ensure that the image stays above the other images when hovered-over */
+        /* no image effects for tablet and mobile */
     }
 
     .team_photos__container p b {
-        font-size: 18px;
+        font-size: 16px;
         font-family: 'Overpass', sans-serif;
         font-weight: 600;
         margin: 0 auto;
