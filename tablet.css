@@ -45,12 +45,6 @@
         /* to push nav elements to RHS */
     }
 
-    .topnav {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
     ul.topnav {
         position: absolute;
         top: 12px;
@@ -65,6 +59,9 @@
         cursor: pointer;
         user-select: none;
         /* remove highlight around hamburger */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     ul.topnav li.hamburger a {
@@ -83,15 +80,19 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        width: 200px;
-        height: 300px;
+        width: 100%;
+        /* to increase the width of the clickable area */
+        height: 500px;
+        /* to display all items in the hamburger menu */
     }
 
     .topnav.responsive li.hamburger {
         width: fit-content; 
         /* To make the width of the <li> item the same as the hamburger icon */
         padding: 0;
-        margin-bottom: 21px;
+        margin-bottom: 24px;
+        border: none;
+        /* to remove border appearing around hamburger in responsive */
     }
 
     .topnav.responsive li {
@@ -102,6 +103,9 @@
         /* extra spacing between the li items */
         width: 100%;
         /* To fit the width of the topnav responsive */
+        border: #000 1.75px solid;
+        /* to apply border to menu items in responsive */
+        box-sizing: border-box;
     }
 
     .nav_button a {
@@ -111,14 +115,11 @@
         font-size: 16px;
         font-family: 'Overpass', sans-serif;
         font-weight: 400;
-        padding: 0 10px;
+        line-height: 3;
+        padding: 13px 10px 22px 70%;
+        /* to increase the size of the clickable area */
+        box-sizing: border-box;
         margin: 0 auto;
-        cursor: pointer;
-    }
-
-    .nav_button_stories {
-        display: none;
-        /*For the purposes of this assignment, the 'stories' button will never appear as the Movember site has a separate CSS for 'widedesktop' where the story button only appears when width of screen is >1085px. This would require a 4th CSS */     
     }
 
     .search_icon {
@@ -795,11 +796,16 @@
 
     .footer_column a {
         color: #ffffff;;
-        font-size: 15px;
+        font-size: 16px;
+        line-height: 2.5;
+        /* to increase size of clickable area */
         font-family: 'Overpass', sans-serif;
         font-weight: 200;
         text-decoration: none;
         /* to remove underline from hyperlink */
+        width: 100%;
+        padding: 12px 50px 12px 12px;
+        /* to increase clickable area of footer link */
     }
 
     .footer_column {
@@ -814,6 +820,8 @@
         /* to remove extra space created by auto line height */
         line-height: 1;
         margin: 8px 0;
+        border-bottom: #FFFFFF 1px dotted;
+        /* to define clickable area for tablet */
     }
 
     .footer_column_container {
@@ -833,6 +841,11 @@
 
     .social_media_icon_container {
         display: flex;
+    }
+
+    .social_media_icon_container a {
+        padding: 0;
+        /* to remove padding around a tag */
     }
 
     .social_media_icon {
