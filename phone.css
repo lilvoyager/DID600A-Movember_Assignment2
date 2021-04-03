@@ -100,8 +100,6 @@
     .topnav.responsive li {
         text-align: left;
         background-color: #ffffff;
-        /* background color is on the li items instead of topnav responsive because it would cover the section adjacent it */
-        padding: 12px;
         /* extra spacing between the li items */
         width: 100%;
         /* To fit the width of the topnav responsive */
@@ -111,18 +109,18 @@
     }
 
     .nav_button a {
+        padding: 12px;
+        box-sizing: border-box;
+        display: block;
+        /* to maximise the clickable area of the nav button */
         text-decoration: none;
         color: #000;
         /* to remove underline and blue text colour for hyperlink */
         font-size: 16px;
         font-family: 'Overpass', sans-serif;
         font-weight: 400;
-        line-height: 3;
         /* to increase the size of the clickable area */
-        padding: 22px 70% 22px 10px;
-        /* to increase the size of the clickable area */
-        box-sizing: border-box;
-        margin: 0 auto;
+        width: 100%;
     }
 
     .search_icon {
@@ -776,7 +774,7 @@
         /* to create two rows for logos by wrapping children of parent */
     }
 
-    .footer {
+    .footer__container {
         width: 100%;
         /* removed the height of 518px to allow footer to size to content */
         background-color: #151515;
