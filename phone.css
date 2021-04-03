@@ -15,7 +15,7 @@
         /* to prevent horizontal scrolling for elements going beyond the page */
     }
 
-    .header {
+    .header__container {
         width: 100%;
         display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */

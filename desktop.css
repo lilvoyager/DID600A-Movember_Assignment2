@@ -18,17 +18,25 @@
     .header {
         width: 100%;
         display: flex;
+        justify-content: center;
+        background-color: #FFFFFF;
+        /* to put the header_container (fixed width) into a 100% width div */
+        position: fixed;
+        top: 0;
+        /* to make the nav bar sticky */
+        z-index: 10;
+        /* to make the header and nav bar sit above the body elements */
+    }
+
+    .header__container {
+        width: 100%;
+        max-width: 1400px;
+        display: flex;
         /* Flex allows the logo and nav content to appear side by side on page */
         align-items: center;
         justify-content: space-between;
         padding: 12px 28px;
         box-sizing: border-box;
-        position: fixed;
-        top: 0;
-        /* to make the nav bar sticky */
-        background-color: #FFFFFF;
-        z-index: 10;
-        /* to make the header and nav bar sit above the body elements */
     }
 
     .logo {

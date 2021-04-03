@@ -15,7 +15,7 @@
         /* to prevent horizontal scrolling for elements going beyond the page */
     }
 
-    .header {
+    .header__container {
         width: 100%;
         height: 68px;
         display: flex;
