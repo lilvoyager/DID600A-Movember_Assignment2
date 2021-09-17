@@ -6,9 +6,9 @@ Recreating the Movember home page (https://au.movember.com/?home) as at 13 Mar 2
 
 Documents included in this series for submission are:
 
-1. index.html
+1. home.html
 2. support_us.html
-3. index.html
+3. home.html
 4. desktop.css
 5. tablet.css
 6. mobile.css
